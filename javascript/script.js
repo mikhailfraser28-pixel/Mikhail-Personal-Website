@@ -78,3 +78,22 @@ if (topButton) {
 
     });
 }
+
+// Contact form
+const contactForm = document.getElementById("contactForm");
+const messageStatus = document.getElementById("messageStatus");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        messageStatus.textContent = "Message sent successfully!";
+        messageStatus.style.color = "green";
+
+        contactForm.reset();
+
+    });
+
+}
